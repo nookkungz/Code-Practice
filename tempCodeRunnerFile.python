@@ -1,0 +1,9 @@
+num1 = str(input(""))
+num = [int(x)for x in (num1)]
+total = 0
+done = sum(num)
+print(type(done))
+while done > 9:
+    donenew = [int(z)for z in str(done)]
+    done = sum(donenew)
+print(done)

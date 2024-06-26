@@ -1,0 +1,11 @@
+name = str(input(""))
+name2 = str(input(""))
+city = str(input(""))
+sex = str(input(""))
+call = str(input(""))
+
+print("--- Customer Detail ---")
+print(f"Name : {name} {name2}")
+print(f"Address : {city}")
+print(f"Gender : {sex}")
+print(f"Tel : {call}")

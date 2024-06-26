@@ -1,0 +1,13 @@
+g1 = float(input(""))
+g2 = float(input(""))
+g3 = float(input(""))
+g4 = float(input(""))
+g5 = float(input(""))
+
+print(f"THAI = {g1}")
+print(f"MATH = {g2}")
+print(f"ENGLISH = {g3}")
+print(f"SCIENCE = {g4}")
+print(f"SPORT = {g5}")
+print("---")
+print(f"GPA = {(g1+g2+g3+g4+g5)/5}")

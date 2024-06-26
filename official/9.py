@@ -1,0 +1,6 @@
+x = int(input(""))
+x1 = int(input(""))
+print(f"{x} + {x1} = {x+x1}")
+print(f"{x} - {x1} = {x-x1}")
+print(f"{x} * {x1} = {x*x1}")
+print(f"{x} / {x1} = {x//x1}")
