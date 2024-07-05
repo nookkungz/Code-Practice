@@ -17,6 +17,5 @@ for i in n :
 for i in range (0,3,1) :
     if box[i] == 1 :
         print(i+1)
-print(box)
 
         
