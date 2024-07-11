@@ -1,11 +1,21 @@
-print("First fraction:")
-a = int(input("Enter a numerator a: "))
-b = int(input("Enter a denominator b: "))
-print("Second fraction:")
-c = int(input("Enter a numerator c: "))
-d = int(input("Enter a denominator d: "))
+# Input values
+a = 3
+b = 8
+c = 9
+d = 12
 
-numerator = a * d + b * c
+# Calculate the numerator and denominator of the result
+numerator = a * d + c * b
 denominator = b * d
 
+# Simplify the fraction by finding the greatest common divisor (GCD)
+x, y = numerator, denominator
+while y:
+    x, y = y, x % y
+g = x
+
+numerator //= g
+denominator //= g
+
+# Print the result
 print(f"Summation of the two fractions is {numerator} / {denominator}")

@@ -1,24 +1,13 @@
-x = float(input())
-y = float(input())
-z = float(input())
+import math
+x = float(input("Enter x: "))
+y = float(input("Enter y: "))
+z = float(input("Enter z: "))
 
-# a1
-print(f"a1 = {(x**y)+z}")
+print(f"a1 = {(x**y)+z:.2f}")
+print(f"a2 = {(math.cos(2*math.pi)) + (math.log(x , math.e)):.2f}")
+print(f"a3 = {abs(x)+abs(y):.2f}")
+print(f"a4 = {(math.sqrt((x**2)+(y**2)+(z**2))):.2f}")
+print(f"a5 = {x/y:.2f}")
+print(f"a6 = {math.pow(x + y, 1/5):.2f}")
+print(f"a7 = {math.exp(x * math.log(y)):.2f}")
 
-# a2 (since cos(2*pi) is always 1)
-print(f"a2 = {(1) + (math.log(x))}")  # Note: math.log is still needed
-
-# a3
-print(f"a3 = {abs(x)+abs(y)}")
-
-# a4
-print(f"a4 = {(x**2 + y**2 + z**2)**0.5}")  # Use pow instead of math.sqrt
-
-# a5 (due to trigonometric identity)
-print(f"a5 = {x**2 + (1 - x**2)}")  # Leverage sin^2(x) + cos^2(x) = 1
-
-# a6
-print(f"a6 = {(5 * (x + y))**0.5}")  # Use pow instead of math.sqrt
-
-# a7
-print(f"a7 = {pow(2.71828, x * math.log(y))} ")  # Use a constant for e
