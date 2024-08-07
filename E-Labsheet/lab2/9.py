@@ -1,5 +1,5 @@
-w = float(input())
-h = float(input())
+w = float(input("Weight (kg): "))
+h = float(input("Height (m): "))
 bmi = w/(h**2)
 print(f"BMI is {bmi:.1f}")
 if bmi < 18.5 :

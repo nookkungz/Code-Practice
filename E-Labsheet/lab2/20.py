@@ -2,7 +2,7 @@ age = int(input("Enter your age: "))
 income = int(input("Enter your net income: "))
 nottax = income 
 tax = 0
-if age > 14 and age < 60 :
+if age > 14 and age <= 60 :
     if income > 0 and income < 80000 :
         if income > 0 and income <= 30000 :
             tax = income * 0.2

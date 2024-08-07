@@ -1,0 +1,8 @@
+print("Upper left corner coordinate:")
+x = int(input("  << x axis: "))
+y = int(input("  << y axis: "))
+eas = int(input("  << Eastern: "))
+sou = int(input("  << Southern: "))
+print("Enter a coordinate:")
+x1 = int(input("  << x axis: "))
+x2 = int(input("  << y axis: "))
