@@ -1,26 +1,28 @@
-h = int(input("Enter height : "))
-w = int(input("Enter width : "))
-while True :
-    
-    if h % 2 == 0 :
-        b = w
-        while True :
-            print("* " , end = "")
-            b -= 1
-            if b == 0 :
-                print()
-                break 
+h = int(input("Enter height: "))
+w = int(input("Enter width: "))
+count = 0
+if h <= 0 or w <= 0 :
+    print("Invalid input, program terminates.")
+else :
+    while True :
         
-    elif h % 2 == 1 :
-        b = w
-        while True :
-            print(" *" , end = "")
-            b -= 1
-            if b == 0 :
-                print()
-                break 
-                
-    print(h)
-    h -= 1 
-    if h == 0 :
-        break 
+        if count % 2 == 0 :
+            b = w
+            while True :
+                print("* " , end = "")
+                b -= 1
+                if b == 0 :
+                    print()
+                    break 
+            
+        elif count % 2 == 1 :
+            b = w
+            while True :
+                print(" *" , end = "")
+                b -= 1
+                if b == 0 :
+                    print()
+                    break 
+        count += 1 
+        if count == h :
+            break 
