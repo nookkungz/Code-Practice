@@ -2,12 +2,13 @@ import math
 
 
 def simple_interest(p , r , t) :
-    result = p *(r/100) * t
+    result = (p *(r/100) * t ) + p
     return result
 
 
 def compound_interest(p, r, t) :
-    return 0
+    result = p*((1 + (r/100))**t)
+    return result
 
 #main
 p = int(input("Enter principle: "))

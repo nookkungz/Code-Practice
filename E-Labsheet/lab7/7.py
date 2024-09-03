@@ -5,7 +5,6 @@ if n < 1:
 elif n == 1 :
     n = n
 else:
-    print(f"Enter positive integer: {n}")
     
     factor = 2
     
