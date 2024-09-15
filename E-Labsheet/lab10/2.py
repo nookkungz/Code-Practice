@@ -20,7 +20,7 @@ while True :
 print("Original list:")
 print(b)
 print("Accumulative Sum:")
-accum_sum(b)
 
+b.sort(re)
 
 
