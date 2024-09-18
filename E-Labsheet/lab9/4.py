@@ -1,7 +1,7 @@
 def fac(n) :
     done = 1
     if n == 0 :
-        return 0
+        return 1
     while True :
         done = done*n
         n -= 1
