@@ -1,18 +1,25 @@
-n = str(input(""))
-done = ""
-done += f'"'
-for i in range (len(n)) :
-    if i == len(n)-1 :
-        done += f'{n[i]}"'
-        break
-    if n[i] == " " and ((n[i+1] == " " or n[i+1] == "," ) and (n[i-1] == ",")) :
-        pass
+input_string = input("Enter your string: ")
+
+result = '"'
+in_quotes = True
+
+for i, char in enumerate(input_string):
+    if char == ',':
+        if in_quotes:
+            result += '",'
+        result += '"'
+        in_quotes = True
+    elif char == ' ':
+        if i > 0 and input_string[i-1] != ',' and (i == len(input_string) - 1 or input_string[i+1] != ','):
+            result += char
     else:
-        done += n[i]
-    if n[i+1] == "," :
-        done += f'"'
-    if n[i] == ",":
-        done += f'"'
-if n[-1] == "," :
-    done += f',""'
-print(done)
+        result += char
+
+if in_quotes:
+    result += '"'
+
+if input_string and input_string[-1] == ',':
+    result += ',""'
+
+# Print the result
+print(result)

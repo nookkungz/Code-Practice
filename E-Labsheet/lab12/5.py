@@ -13,10 +13,8 @@ for i in range (len(gus)) :
     for j in range(len(ans)) :
         if gus[i] == ans[j] :
             done[an.find(gus[i])] = ans[j]
-            ans[j] = "$"
+            ans[j] = ""
 
-print(done)
-print(ans)
 for i in done :
     print(i , end = "")
             

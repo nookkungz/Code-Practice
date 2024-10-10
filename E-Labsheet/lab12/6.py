@@ -1,37 +1,38 @@
-n = str(input(""))
-nl = []
-for i in n :
-    nl.append(i)
+def format_number(input_str):
+    # Remove leading/trailing whitespace
+    input_str = input_str.strip()
+    
+    # Check for invalid comma placement
+    if ',' in input_str:
+        parts = input_str.split(',')
+        if len(parts) != 2 or len(parts[1]) != 3:
+            return "ERROR"
+        input_str = input_str.replace(',', '')
+    
+    try:
+        # Try to convert to float
+        num = float(input_str)
+        
+        # Check if it's a whole number
+        if num.is_integer():
+            # If whole number, convert to int and then back to string
+            return str(int(num))
+        else:
+            # If decimal, check if it has more than 2 decimal places
+            if len(input_str.split('.')[-1]) > 2:
+                return "ERROR"
+            # Format to 2 decimal places
+            return f"{num:.2f}"
+    except ValueError:
+        # If conversion fails, return ERROR
+        return "ERROR"
 
-point = 0
-a = 0
-count = 0
-
-for i in range (len(nl)) :
-    if nl[i] in "abcdefghijklmnopqrstuvwsyz" :
-        point = 1 
+# Main program
+while True:
+    user_input = input("Enter a number (or press Enter to exit): ")
+    if user_input == "":
         break
-print(nl)
-if point == 1 :
-    print("ERROR")
-else :
-    for i in range (len(nl)) :
-        if nl[i] == "." : 
-            for j in range (i+1,len(nl)) :
-                a += 1
-            if a > 2 :
-                point = 2 
-
-    if point == 2 :
-        print("ERROR")
-    else :
-        if "." not in nl :
-            for j in range (len(nl)-1,-1,-1):
-                print(j , j%4 , n[j])
-                print(count)
-                count =+ 1
-                if count%4 == 0 : 
-                    if nl[j] != "," :
-                        print("ERROR")
-                        break
-
+    result = format_number(user_input)
+    print(f"Input: {user_input}")
+    print(f"Output: {result}")
+    print()
