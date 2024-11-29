@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/My work/portfolio/Code-Practice/C/test.c/Hackerrank",
-      "program": "d:/My work/portfolio/Code-Practice/C/test.c/Hackerrank/build/Debug/outDebug",
+      "cwd": "d:/My work/portfolio/Code-Practice/C/Lab/Lab1",
+      "program": "d:/My work/portfolio/Code-Practice/C/Lab/Lab1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
