@@ -8,13 +8,16 @@ int main() {
 
     fgets(input,sizeof(input),stdin);
     num = atoi(input);
-
-    for (i = (num+96) ;  i >= 97 ; i--){
-        printf("%c-",i);
+    if (num == 0) {
+        printf("-");
     }
-    printf("%c",97);
-    i = (num+96) ;
-    for (i >= 98 ; i ; i--){
+    else {
+    for (i = (num+96) ;  i >= 97 ; i--){
+        printf("%c",i);
+        if (i > 97) printf("-");
+    }
+    for (i = 98 ;  i <= (num + 96) ; i++){
         printf("-%c",i);
+    }
     }
 }
