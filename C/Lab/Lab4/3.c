@@ -5,7 +5,7 @@
 // count target in n
 int count_target(int n, int target)
 {
-    int count, t ;
+    int count = 0, t ;
     while (1){
         if (n == 0){
             break;
