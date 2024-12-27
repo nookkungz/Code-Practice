@@ -1,30 +1,43 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
-    int num, i , j, k, c;
+    int N;
     char input[10];
     fgets(input, sizeof(input), stdin);
-    num = atoi(input);
-    for (j=num-2 ; j >= 0;j--) {
-        for(i = j; i >= 0;i--){
-            printf("--");
-        }
-        c -= 1;
-        for (k=0 ;k >= 0; k--){
-        printf("%c","a"+k);
-    }
-        printf("\n");
+    N = atoi(input);
     
+    char top = 'a' + (N - 1);
+    int total = 2 * N - 1;
+    if( N <= 0 || N > 26){
+        printf("-");
     }
-
-
-    for (j=2 ; j <= num;j++) {
-        for(i = 0; i <= j;i++){
-            printf("--");
+    else{ 
+        for (int i = 0; i < total; i++) {
+        int r = (i < N) ? i : (2 * N - 2 - i);
+        
+        int s = 2 * (N - 1 - r);
+        for (int d = 0; d < s; d++) {
+            printf("-");
         }
+        
+        for (int k = 0; k <= r; k++) {
+            printf("%c", (char)(top - k));
+            if (k < r) {
+                printf("-");
+            }
+        }
+        
+        for (int k = r - 1; k >= 0; k--) {
+            printf("-%c", (char)(top - k));
+        }
+        
+        for (int d = 0; d < s; d++) {
+            printf("-");
+        }
+        
         printf("\n");
     }
-
+    }
+    
     return 0;
 }
