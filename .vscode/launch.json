@@ -2,6 +2,55 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "H2",
+      "request": "launch",
+      "mainClass": "H2",
+      "projectName": "Code-Practice_f7128094"
+    },
+    {
+      "type": "java",
+      "name": "h3",
+      "request": "launch",
+      "mainClass": "h3",
+      "projectName": "Code-Practice_f7128094"
+    },
+    {
+      "type": "java",
+      "name": "h1",
+      "request": "launch",
+      "mainClass": "h1",
+      "projectName": "Code-Practice_f7128094"
+    },
+    {
+      "type": "java",
+      "name": "h2",
+      "request": "launch",
+      "mainClass": "h2",
+      "projectName": "Code-Practice_f7128094"
+    },
+    {
+      "type": "java",
+      "name": "Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "Code-Practice_f7128094"
+    },
+    {
+      "type": "java",
+      "name": "h2",
+      "request": "launch",
+      "mainClass": "Java.hyperskill.HackerRank.h2",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "h1",
+      "request": "launch",
+      "mainClass": "Java.hyperskill.HackerRank.h1",
+      "projectName": ""
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
